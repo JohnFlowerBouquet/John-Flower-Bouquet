@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>John Flower Bouquet</title>
+  <link rel="stylesheet" href="styles.css" type="text/css" media="screen" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+<div class="backgroundflower">
+<div class="wrapper">
+
+<div class="row1">
+  <div class="circle">
+    <h1>John<br />Flower<br />Bouquet</h1>
+  </div>
+</div>
+<div class="navbar">
+  <nav>
+    <ul>
+      <li><a onclick="change('idhome')" href="#">Home</a></li>
+      <li><a onclick="change('idabout')" href="#">About</a></li>
+      <li><a onclick="change('idprojects')" href="#">Projects</a></li>
+      <li><a onclick="change('idcontact')" href="#">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+<div class="content">
+    <div id="idhome" class="buttons">
+	  <div class="column1">
+	    <img src="homeimage.jpg" class="photo" alt="My photo">
+	  </div>
+	  <div class="text column1">
+	    <h2 class="">Home</h2>
+	    <p class="">Lorem ipsum dolor sit amet</p>
+		</div>
+	  </div>
+	</div>
+	 
+    <div id="idabout" class="buttons">
+	  <img src="myphoto.jpg" alt="My photo" class="photo row2">
+	  <h2>About</h2>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed velit ex, mattis sodales vestibulum sed, feugiat ac lacus. In sit amet vehicula est. Aliquam vestibulum tincidunt lacus ac sollicitudin. Phasellus vel enim urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec est odio, luctus eget enim consectetur, mattis tincidunt felis. Phasellus ut tempor lectus, scelerisque hendrerit turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus pharetra ornare sapien, et bibendum leo ullamcorper vestibulum. Pellentesque vel risus dolor. Mauris porttitor est ex, nec iaculis arcu condimentum eu.</p>
+	</div>
+	
+    <div id="idprojects" class="buttons">
+	  <h2>Projects</h2>
+	</div>
+	
+    <div id="idcontact" class="buttons">
+	  <h2>Contact</h2>
+	</div>
+</div>
+</div>
+
+<script>
+function change(name) {
+    var x = document.getElementById(name);
+	var a = document.getElementById("idhome");
+	var b = document.getElementById("idabout");
+	var c = document.getElementById("idprojects");
+	var d = document.getElementById("idcontact");
+	
+	if (x == a) {
+	    a.style.display = "block";
+		b.style.display = "none";
+		c.style.display = "none";
+		d.style.display = "none";
+	} else if (x == b) {
+	    b.style.display = "block";
+		a.style.display = "none";
+		c.style.display = "none";
+		d.style.display = "none";
+	}  else if (x == c) {
+	    c.style.display = "block";
+		a.style.display = "none";
+		b.style.display = "none";
+		d.style.display = "none";
+	}  else if (x == d) {
+	    d.style.display = "block";
+		a.style.display = "none";
+		c.style.display = "none";
+		a.style.display = "none";
+	} else {
+	    x.style.display = "block"}
+}
+</script>
+
+</body>
+</html>
