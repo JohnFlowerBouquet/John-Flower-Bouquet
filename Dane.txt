@@ -1,2 +1,0 @@
-john.flower.bouquet@gmail.com
-haslen: john + flower + imie(first letter capable of writing as number) - Mariusz = Mar1usz
