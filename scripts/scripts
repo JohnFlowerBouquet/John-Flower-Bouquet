@@ -1,0 +1,26 @@
+var elementPosition = $('#navigation').offset();
+
+window.scroll(function(){
+        if(window.scrollTop() > elementPosition.top) {
+          console.log("Working!");
+
+             // $('#navigation').css('position','fixed').css('top','0');
+        } else {
+          console.log("Nope");
+            //$('#navigation').css('position','static');
+        }
+});
+
+$(document).ready(function(){
+  $("header a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+});

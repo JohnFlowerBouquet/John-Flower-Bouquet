@@ -1,79 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>John Flower Bouquet</title>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Portfolio</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<meta name="description" content="John's Portfolio Page">
 	<meta name="keywords" content="JohnFlowerBouquet Portfolio Page">
 	<meta name="author" content="JohnFlowerBouquet">
+	<link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
 	<!--Stylesheets Section -->
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Cabin:700|Lato" rel="stylesheet">
 </head>
 <body>
-<div class="backgroundflower">
-<div class="wrapper">
 
-<div class="row1">
-  <div class="circle">
-    <h1>John<br />Flower<br />Bouquet</h1>
-  </div>
-</div>
-<div class="navbar">
-  <nav>
-    <ul>
-      <li><a onclick="change('idhome')" href="#">Home</a></li>
-      <li><a onclick="change('idabout')" href="#">About</a></li>
-      <li><a onclick="change('idprojects')" href="#">Projects</a></li>
-      <li><a onclick="change('idcontact')" href="#">Contact</a></li>
-    </ul>
-  </nav>
-</div>
-<div class="content">
-    <div id="idhome" class="buttons">
-	  <div class="column1">
-	    <img src="homeimage.jpg" class="photo" alt="My photo">
-	  </div>
-	  <div class="text column1">
-	    <h2 class="">Home</h2>
-	    <p class="">Lorem ipsum dolor sit amet</p>
+	<header class="header">
+		<div class="header__logo">
+
 		</div>
-	  </div>
-	</div>
-	 
-    <div id="idabout" class="buttons">
-	  <img src="myphoto.jpg" alt="My photo" class="photo row2">
-	  <h2>About</h2>
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed velit ex, mattis sodales vestibulum sed, feugiat ac lacus. In sit amet vehicula est. Aliquam vestibulum tincidunt lacus ac sollicitudin. Phasellus vel enim urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec est odio, luctus eget enim consectetur, mattis tincidunt felis. Phasellus ut tempor lectus, scelerisque hendrerit turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus pharetra ornare sapien, et bibendum leo ullamcorper vestibulum. Pellentesque vel risus dolor. Mauris porttitor est ex, nec iaculis arcu condimentum eu.</p>
-	</div>
-	
-    <div id="idprojects" class="buttons">
-	  <h2>Projects</h2>
-	</div>
-	
-    <div id="idcontact" class="buttons">
-	  <h2>Contact</h2>
-	</div>
-</div>
-</div>
+		<h1 class="header__title">Witam Cię na moim portfolio!</h1>
+		<img class="header__photo" src="img/photo.png">
+		<nav class="navbar" id="navigation">
+			<a href="#about" id="about-link">#O mnie</a>
+			<a href="#pojects" id="projects-link">#Projekty</a>
+			<a href="#contact" id="contact-link">#Kontakt</a>
+		</nav>
+	</header>
 
-<footer class="footer-container">
-  <div class="footercol left">
-  <a href="#"><i class="fa fa-facebook"></i></a>
-  <a href="#"><i class="fa fa-linkedin"></i></a>
-  <a href="#"><i class="fa fa-github"></i></a>
-  <a href="mailto:someone@example.com"><i class="fa fa-envelope"></i></a>
-  </div>
-  <div class="footercol center">
-  <a href="#" id="mywebsite"><span>John</span><span>Flower</span><span>Bouquet</span></a>
-  </div>
-  <div class="footercol right">
-  <a class="backtop" href="#">Back to top<i class="fa fa-level-up"></i></a>
-  </div>
+	<section id="about" class="section">
+		<h2 class="section__heading">O mnie</h2>
+		<figure>
+  			<img class="section__image" src="img/photo.png" alt="The Pulpit Rock">
+		</figure>
+		<div class="section__content">
+			<p>Witaj, nazywam się Jan Szczepański i witam Cię serdecznie na moim portfolio! Mam 24 lata i obecnie intensywnie uczę się programowania aby zostać front-end developerem.</p>
+		</div>
+		<a class="section__link" href="#" id="cv">Pobierz moje CV!</a>
+	</section>
+
+	<section id="pojects" class="section">
+		<h2 class="section__heading">Ukończone kursy</h2>
+		<figure>
+  			<img src="img/rect-hor.jpg" alt="The Pulpit Rock" width="304" height="228">
+		</figure>
+		<div class="section__content">
+			<p>Jestem wielkim fanem i "użytkownikiem" samokształcenia z wykorzystaniem darmowych wirtualnych źródeł. Ucząc się w ten sposób można wykształcić w sobie niezawodne metody i zwyczaje, które przydadzą nam się w trakcie całego życia. Oczywiście nie każda dziedzina pozwala obecnie na uzyskania niezbędnych umiejętności praktycznych lecz jestem pewien, że z czasem się to zmieni! Programowanie to druga umiejętność po języku japońskim, którą staram się nabyć w myśl tej metody! Obecnie staram się również aby stało się ono moim chlebem.</p>
+		</div>
+	</section>
+
+	<section id="contact" class="section">
+		<h2 class="section__heading">Biblioteczka</h2>
+		<figure>
+  			<img src="img/rect-hor.jpg" alt="The Pulpit Rock" width="304" height="228">
+		</figure>
+		<div class="section__content">
+			<p>Mimo, że tradycyjne ksiązki nie posiadają dynamicznej struktury, która aktualizowałaby ich treść na bieżąco z obecnymi trendami to są one doskonałą odskocznią od ekranu monitora czy telefonu od czasu do czasu. Oprócz książek związanych z programowaniem czytam również powieści fantasy oraz różnego rodzaju książki o samodoskonaleniu.</p>
+		</div>
+	</section>
+
+
+	<footer class="footer">
+		<div class="footercol">
+		<form method="post" action="https://usebasin.com/f/8bfa23353632" class="footer__form">
+                <input class="form__ele" name="name" type="text" placeholder="Imię i nazwisko" maxlength="50" required="">
+                <input class="form__ele" name="email" type="email" placeholder="Adres email" maxlength="50" required="">
+                <textarea class="form__ele" name="message" placeholder="Wiadomość" maxlength="350" required=""></textarea>
+                <input class="form__ele" id="submit" name="submit" type="submit" value="Wyślij">
+            </form>
+            </div>
+  		<div class="footercol left">
+  			<a href="#"><i class="fab fa-facebook"></i></a>
+  			<a href="#"><i class="fab fa-linkedin"></i></a>
+  			<a href="#"><i class="fab fa-github"></i></a>
+  			<a href="mailto:someone@example.com"><i class="fa fa-envelope"></i></a>
+  		</div>
+  		<div class="footercol">
+  			<small>© Coppyright by Jan Szczepański 2018</small>
+  		</div>
 </footer>
+<script>
 
-<script src="scripts.js"></script>
+var navPosition = document.querySelector('#navigation').offsetTop;
+
+window.onscroll = function() {
+	if (window.pageYOffset > navPosition) {
+		document.querySelector('#navigation').classList.add('navbar-fixed');
+	} else {
+		document.querySelector('#navigation').classList.remove('navbar-fixed');
+	}
+};
+
+$(window).on("load", function(){
+  $(".navbar a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top - 50
+      }, 800,
+      );
+    }
+  });
+});
+</script>
 </body>
 </html>
