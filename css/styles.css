@@ -2,37 +2,50 @@ body, html {
   font-family: "Lato",sans-serif;
 }
 body {
-  background-image: url(../img/background1.jpeg);
+
   background-repeat: no-repeat;
   background-size: auto;
   background-attachment: fixed;
+  margin: 0;
 }
 /* New */
+canvas {
+  background-image: url(../img/background1.jpeg);
+  background-size: cover;
+  position: fixed;
+  z-index: -1;
+    }
 .header {
-  background-image: url(../img/background.jpeg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center;
-	background-color: #BADA55;
   position: relative;
   height: 100vh;
-  -webkit-box-shadow: inset 0px -15px 15px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: inset 0px -15px 15px 0px rgba(0,0,0,0.75);
-  box-shadow: inset 0px -15px 15px 0px rgba(0,0,0,0.75);
-}
-.header__logo {
-  background-color: #BADA55;
+  display: flex;
+  flex-direction: column;
 }
 .header__title {
+  flex-grow: 1;
   text-align: center;
   color: #fff;
   font-family: 'Cabin', sans-serif;
 }
+.hader__logo {
+  border: 1px solid white;
+  flex-grow: 3;
+}
 .header__photo {
+  border-radius: 50%;
+  box-shadow: 0 0 15px #9ecaed;
   display: block;
-  width: 90vw;
+  width: 200px;
   height: auto;
   margin: 0 auto;
+}
+.header__bottom {
+  flex-grow: 1;
+}
+.header__person {
+  height: auto;
+  width: 30vw;
+  margin-bottom: -17vh;
 }
 .navbar {
   font-family: 'Cabin', sans-serif;
@@ -67,12 +80,16 @@ body {
 .navbar > a:hover {
   text-shadow: 2px 1px 3px #0011;
 }
+.break {
+  background-image: url(../img/city.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  height: 200px;
+}
 .section {
-  -webkit-box-shadow: inset 0px 10px 15px 0px rgba(0,0,0,0.75);
--moz-box-shadow: inset 0px 10px 15px 0px rgba(0,0,0,0.75);
-box-shadow: inset 0px 10px 15px 0px rgba(0,0,0,0.75);
-
-  color: white;
+  background-color: #fff;
+  color: #444948;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -88,7 +105,6 @@ box-shadow: inset 0px 10px 15px 0px rgba(0,0,0,0.75);
   width: 80vw;
 }
 .section__content p {
-  text-align: justify;
   font-size: 1.3em;
   line-height: 1.6;
 
@@ -98,11 +114,23 @@ box-shadow: inset 0px 10px 15px 0px rgba(0,0,0,0.75);
   margin: 0 auto;
   color: white;
 }
-
+.courses {
+  width: 100px;
+  height: 100px;
+}
+.courses__img {
+  height: 100px;
+  width: auto;
+}
+.projects {}
+.projects__img {
+  width: 100px;
+  height: 100px;
+}
 .footer {
-  background-color: #212121;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
+  color: white;
 }
 .footer__form {
   display: flex;
@@ -116,11 +144,6 @@ box-shadow: inset 0px 10px 15px 0px rgba(0,0,0,0.75);
 }
 /* Old */
 
-
-.
-footer .footercol {
-  display: inline-block;
-}
 footer .center {
   padding-top: 20px;
   text-align: center;
