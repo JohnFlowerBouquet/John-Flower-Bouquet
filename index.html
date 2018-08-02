@@ -16,17 +16,25 @@
 <body>
 
 	<header class="header">
-		<div class="header__logo">
-
+		<canvas id="canvas"></canvas>
+		<div class="header__title">
+			<h1>Witam Cię na moim portfolio!</h1>
 		</div>
-		<h1 class="header__title">Witam Cię na moim portfolio!</h1>
-		<img class="header__photo" src="img/photo.png">
-		<nav class="navbar" id="navigation">
-			<a href="#about" id="about-link">#O mnie</a>
-			<a href="#pojects" id="projects-link">#Projekty</a>
-			<a href="#contact" id="contact-link">#Kontakt</a>
-		</nav>
+		<div class="header__logo">
+			<img class="header__photo" src="img/moon.png">
+		</div>
+		<div class="header__bottom">
+			<img class="header__person" src="img/person.png">
+			<nav class="navbar" id="navigation">
+				<a href="#about" id="about-link">#O mnie</a>
+				<a href="#projects" id="projects-link">#Projekty</a>
+				<a href="#contact" id="contact-link">#Kontakt</a>
+			</nav>
+		</div>
 	</header>
+
+	<div class="break">
+	</div>
 
 	<section id="about" class="section">
 		<h2 class="section__heading">O mnie</h2>
@@ -39,17 +47,17 @@
 		<a class="section__link" href="#" id="cv">Pobierz moje CV!</a>
 	</section>
 
-	<section id="pojects" class="section">
+	<section class="section">
 		<h2 class="section__heading">Ukończone kursy</h2>
-		<figure>
-  			<img src="img/rect-hor.jpg" alt="The Pulpit Rock" width="304" height="228">
-		</figure>
+		<div class="courses">
+			<img class="courses__img" src="img/fcc.jpeg">
+		</div>
 		<div class="section__content">
 			<p>Jestem wielkim fanem i "użytkownikiem" samokształcenia z wykorzystaniem darmowych wirtualnych źródeł. Ucząc się w ten sposób można wykształcić w sobie niezawodne metody i zwyczaje, które przydadzą nam się w trakcie całego życia. Oczywiście nie każda dziedzina pozwala obecnie na uzyskania niezbędnych umiejętności praktycznych lecz jestem pewien, że z czasem się to zmieni! Programowanie to druga umiejętność po języku japońskim, którą staram się nabyć w myśl tej metody! Obecnie staram się również aby stało się ono moim chlebem.</p>
 		</div>
 	</section>
 
-	<section id="contact" class="section">
+	<section class="section">
 		<h2 class="section__heading">Biblioteczka</h2>
 		<figure>
   			<img src="img/rect-hor.jpg" alt="The Pulpit Rock" width="304" height="228">
@@ -59,8 +67,18 @@
 		</div>
 	</section>
 
+	<section id="projects" class="section">
+		<h2 class="section__heading">Projekty</h2>
+		<div class="projects">
+			<img class="projects__img" src="img/immersive-japanese.jpg">
+		</div>
+		<div class="section__content">
+			<p>Jestem wielkim fanem i "użytkownikiem" samokształcenia z wykorzystaniem darmowych wirtualnych źródeł. Ucząc się w ten sposób można wykształcić w sobie niezawodne metody i zwyczaje, które przydadzą nam się w trakcie całego życia. Oczywiście nie każda dziedzina pozwala obecnie na uzyskania niezbędnych umiejętności praktycznych lecz jestem pewien, że z czasem się to zmieni! Programowanie to druga umiejętność po języku japońskim, którą staram się nabyć w myśl tej metody! Obecnie staram się również aby stało się ono moim chlebem.</p>
+		</div>
+	</section>
 
-	<footer class="footer">
+
+	<footer class="footer" id="contact">
 		<div class="footercol">
 		<form method="post" action="https://usebasin.com/f/8bfa23353632" class="footer__form">
                 <input class="form__ele" name="name" type="text" placeholder="Imię i nazwisko" maxlength="50" required="">
@@ -97,12 +115,83 @@ $(window).on("load", function(){
       event.preventDefault();
       var hash = this.hash;
       $('html, body').animate({
-        scrollTop: $(hash).offset().top - 50
+        scrollTop: $(hash).offset().top - 100
       }, 800,
       );
     }
   });
 });
+
+var canvas = document.querySelector('canvas');
+var ctx = canvas.getContext('2d');
+fitToContainer(canvas);
+
+function fitToContainer(canvas){
+  canvas.style.width='100%';
+  canvas.style.height='100%';
+  canvas.width  = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+}
+
+var canvasWidth = canvas.width;
+var canvasHeight = canvas.height;
+
+function Star(x, y, r, color) {
+	this.x = x;
+	this.y = y;
+	this.r = r;
+	this.color = color;
+	this.rChange = 0.015;
+}
+
+Star.prototype = {
+	constructor: Star,
+	render: function() {
+		ctx.beginPath();
+		ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2, false);
+		ctx.shadowBlur = 8;
+		ctx.shadowColor = "#fff";
+		ctx.fillStyle = this.color;
+		ctx.fill();
+	},
+	update: function() {
+		if (this.r > 2 || this.r < .8){
+           this.rChange = - this.rChange;
+       }
+       this.r += this.rChange;
+	}
+}
+
+function randomColor() {
+	var arrColors = ['ffffff', 'ffecd3', 'bfcfff'];
+	return "#" + arrColors[Math.floor((Math.random()*3))];
+}
+var stars = [];
+
+for(i = 0; i < 50; i++) {
+	var randomX = Math.floor((Math.random()*canvasWidth)+1);
+	var randomY = Math.floor((Math.random()*canvasHeight)+1);
+	var randomR = Math.random() * 1.5 + .5;
+	var star = new Star(randomX, randomY, randomR, randomColor());
+	stars.push(star);
+}
+function update() {
+	for(i = 0; i < stars.length; i++) {
+		if (stars[i].r > 2 || stars[i].r < .8){
+           stars[i].rChange = - stars[i].rChange;
+       }
+       stars[i].r += stars[i].rChange;
+	}
+}
+function animate() {
+	update();
+	ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+	for(var i = 0; i < stars.length; i++) {
+		stars[i].render();
+	}
+	requestAnimationFrame(animate);
+}
+animate();
 </script>
 </body>
 </html>
