@@ -1,8 +1,9 @@
-body, html {
+* {
   font-family: "Lato",sans-serif;
 }
 body {
-
+  background-image: url(../img/background1.jpeg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-size: auto;
   background-attachment: fixed;
@@ -10,11 +11,9 @@ body {
 }
 /* New */
 canvas {
-  background-image: url(../img/background1.jpeg);
-  background-size: cover;
-  position: fixed;
+  position: absolute;
   z-index: -1;
-    }
+}
 .header {
   position: relative;
   height: 100vh;
@@ -122,6 +121,62 @@ canvas {
   height: 100px;
   width: auto;
 }
+/* Goodreads */
+.goodreads {
+  color: #444948;
+}
+.hidden {
+  display: none;
+}
+.invis {
+  visibility: hidden;
+}
+.gr_custom_container_1533674007 {
+    /* customize your Goodreads widget container here*/
+    border-radius:10px;
+    padding: 10px 5px 10px 5px;
+    background-color: #FFFFFF;
+    color: #444948;
+    width: 300px
+  }
+  .gr_custom_header_1533674007 {
+    /* customize your Goodreads header here*/
+    width: 100%;
+    color: #444948;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 120%;
+    cursor: pointer;
+  }
+  .gr_custom_each_container_1533674007 {
+    /* customize each individual book container here */
+    width: 100%;
+
+    margin-bottom: 10px;
+    overflow: auto;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #aaa;
+  }
+  .gr_custom_book_container_1533674007 {
+    /* customize your book covers here */
+    overflow: hidden;
+    height: 160px;
+    color: #444948;
+    margin: 0 auto;
+    width: 98px;
+  }
+  .gr_custom_author_1533674007 {
+    /* customize your author names here */
+    font-size: 10px;
+  }
+  .gr_custom_title_1533674007 a {
+    text-decoration: none;
+    color: #444948;
+  }
+  .gr_custom_author_1533674007 a {
+    text-decoration: none;
+    color: #444948;
+  }
 .projects {}
 .projects__img {
   width: 100px;
@@ -131,8 +186,26 @@ canvas {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   color: white;
+  position: relative;
+
+}
+.footer__button {
+  width: 200px;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: 25px 42px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-family: 'Cabin', sans-serif;
+  font-size: 16px;
+  border-color: #444948;
+  cursor: pointer;
 }
 .footer__form {
+  margin: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;

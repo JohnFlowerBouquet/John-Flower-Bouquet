@@ -59,10 +59,43 @@
 
 	<section class="section">
 		<h2 class="section__heading">Biblioteczka</h2>
-		<figure>
-  			<img src="img/rect-hor.jpg" alt="The Pulpit Rock" width="304" height="228">
-		</figure>
-		<div class="section__content">
+		<div class="goodreads">
+      		<div id="gr_grid_widget_1533674007">
+        <!-- Show static html as a placeholder in case js is not enabled - javascript include will override this if things work -->
+        <!-- Show static HTML/CSS as a placeholder in case js is not enabled - javascript include will override this if things work -->
+      			<div id="gr_custom_widget_1533674007">
+          			<div class="gr_custom_container_1533674007">
+    					<button id="recently">Ostatnio przeczytane:</button>
+      						<div class="gr_custom_each_container_1533674007">
+          						<div class="gr_custom_book_container_1533674007">
+            						<a title="The Principles of Beautiful Web Design" rel="nofollow" href="https://www.goodreads.com/review/show/2460491835?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Principles of Beautiful Web Design" border="0" src="https://images.gr-assets.com/books/1436377686m/258823.jpg" /></a>
+          						</div>
+          						<div class="gr_custom_title_1533674007">
+            						<a rel="nofollow" href="https://www.goodreads.com/review/show/2460491835?utm_medium=api&amp;utm_source=custom_widget">The Principles of Beautiful Web Design</a>
+          						</div>
+          						<div class="gr_custom_author_1533674007"> by <a rel="nofollow" href="https://www.goodreads.com/author/show/151232.Jason_Beaird">Jason Beaird</a>
+          						</div>
+      						</div>
+      						<div class="gr_custom_each_container_1533674007">
+          						<div class="gr_custom_book_container_1533674007">
+            						<a title="The Self-Taught Programmer: The Definitive Guide to Programming Professionally" rel="nofollow" href="https://www.goodreads.com/review/show/2460492946?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Self-Taught Programmer: The Definitive Guide to Programming Professionally" border="0" src="https://images.gr-assets.com/books/1482729135m/33580202.jpg" /></a>
+          						</div>
+          						<div class="gr_custom_title_1533674007">
+            						<a rel="nofollow" href="https://www.goodreads.com/review/show/2460492946?utm_medium=api&amp;utm_source=custom_widget">The Self-Taught Programmer: The Definitive Guide to Programming Professionally</a>
+          						</div>
+          						<div class="gr_custom_author_1533674007"> by <a rel="nofollow" href="https://www.goodreads.com/author/show/16233239.Cory_Althoff">Cory Althoff</a>
+          						</div>
+      						</div>
+  							<center>
+    							<p>Zobacz mój profil na:</p><a rel="nofollow" href="https://www.goodreads.com/user/show/84293887-john" target="blank"><img alt="goodreads.com" src="https://www.goodreads.com/images/widget/widget_logo.gif" /></a>
+  							</center>
+  					</div>
+
+      			</div>
+      
+			</div>
+		</div> <!-- koniec goodreads -->
+   		<div class="section__content">
 			<p>Mimo, że tradycyjne ksiązki nie posiadają dynamicznej struktury, która aktualizowałaby ich treść na bieżąco z obecnymi trendami to są one doskonałą odskocznią od ekranu monitora czy telefonu od czasu do czasu. Oprócz książek związanych z programowaniem czytam również powieści fantasy oraz różnego rodzaju książki o samodoskonaleniu.</p>
 		</div>
 	</section>
@@ -78,9 +111,10 @@
 	</section>
 
 
-	<footer class="footer" id="contact">
+	<footer class="footer">
+		<button id="contact" class="footer__button">Napisz do mnie!</button>
 		<div class="footercol">
-		<form method="post" action="https://usebasin.com/f/8bfa23353632" class="footer__form">
+		<form id="form" method="post" action="https://usebasin.com/f/8bfa23353632" class="footer__form invis">
                 <input class="form__ele" name="name" type="text" placeholder="Imię i nazwisko" maxlength="50" required="">
                 <input class="form__ele" name="email" type="email" placeholder="Adres email" maxlength="50" required="">
                 <textarea class="form__ele" name="message" placeholder="Wiadomość" maxlength="350" required=""></textarea>
@@ -97,18 +131,50 @@
   			<small>© Coppyright by Jan Szczepański 2018</small>
   		</div>
 </footer>
+
+<script src="https://www.goodreads.com/review/custom_widget/84293887.Ostatnio%20przeczytane:?cover_size=medium&num_books=5&order=a&shelf=it&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_added&&widget_bg_transparent=true&&widget_id=1533674007&widget_title_size=medium" type="text/javascript" charset="utf-8"></script>
+
 <script>
+//Goodreads shelf
+var goodreads = document.querySelector('.goodreads');
+var recently = document.querySelector('.gr_custom_header_1533674007').firstElementChild;
+var books = document.getElementsByClassName('gr_custom_each_container_1533674007');
+window.addEventListener('load', function(event){
+	document.querySelector('center').remove();
+    recently.setAttribute('target', '_blank');
+    recently.removeAttribute('href');
+    recently.addEventListener('click', function() {
+    	for(var i = books.length - 1; i >= 0; --i)
+    {
+        books[i].classList.toggle('hidden');
+    }});
+        for(var i = books.length - 1; i >= 0; --i)
+    {
+        books[i].classList.add('hidden');
+    } 
+    
+});
+//Show contact message
+var contact = document.getElementById('contact');
+var form = document.getElementById('form');
+contact.addEventListener('click', function(event) {
+	contact.classList.add('hidden');
+	form.classList.remove('invis');
+})
 
-var navPosition = document.querySelector('#navigation').offsetTop;
 
+//Fixed Navbar
+var navbar = document.querySelector('#navigation');
+const navbarPos = navbar.offsetTop;
 window.onscroll = function() {
-	if (window.pageYOffset > navPosition) {
-		document.querySelector('#navigation').classList.add('navbar-fixed');
+	if (window.pageYOffset >= navbarPos) {
+		navbar.classList.add('navbar-fixed');
 	} else {
-		document.querySelector('#navigation').classList.remove('navbar-fixed');
+		navbar.classList.remove('navbar-fixed');
 	}
 };
 
+//Move To anchors
 $(window).on("load", function(){
   $(".navbar a").on('click', function(event) {
     if (this.hash !== "") {
@@ -122,6 +188,7 @@ $(window).on("load", function(){
   });
 });
 
+//Twinkle Stars
 var canvas = document.querySelector('canvas');
 var ctx = canvas.getContext('2d');
 fitToContainer(canvas);
@@ -135,6 +202,24 @@ function fitToContainer(canvas){
 
 var canvasWidth = canvas.width;
 var canvasHeight = canvas.height;
+
+(function() {
+  window.addEventListener("resize", resizeThrottler, false);
+  var resizeTimeout;
+  function resizeThrottler() {
+    if ( !resizeTimeout ) {
+    	console.log("resized");
+      resizeTimeout = setTimeout(function() {
+        resizeTimeout = null;
+        actualResizeHandler();
+       }, 66);
+    }
+  }
+  function actualResizeHandler() {
+    animate();
+  }
+
+}());
 
 function Star(x, y, r, color) {
 	this.x = x;
@@ -166,6 +251,7 @@ function randomColor() {
 	var arrColors = ['ffffff', 'ffecd3', 'bfcfff'];
 	return "#" + arrColors[Math.floor((Math.random()*3))];
 }
+
 var stars = [];
 
 for(i = 0; i < 50; i++) {
@@ -175,6 +261,7 @@ for(i = 0; i < 50; i++) {
 	var star = new Star(randomX, randomY, randomR, randomColor());
 	stars.push(star);
 }
+
 function update() {
 	for(i = 0; i < stars.length; i++) {
 		if (stars[i].r > 2 || stars[i].r < .8){
@@ -192,6 +279,8 @@ function animate() {
 	requestAnimationFrame(animate);
 }
 animate();
+
 </script>
+
 </body>
 </html>
