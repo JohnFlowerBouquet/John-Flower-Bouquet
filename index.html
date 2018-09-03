@@ -16,25 +16,25 @@
 <body>
 
 	<header class="header">
-		<canvas id="canvas"></canvas>
-		<div class="header__title">
-			<h1>Witam Cię na moim portfolio!</h1>
+		<div class="header__title1">
+			<h1>Portfolio</h1>
 		</div>
-		<div class="header__logo">
-			<img class="header__photo" src="img/moon.png">
-		</div>
-		<div class="header__bottom">
-			<img class="header__person" src="img/person.png">
-			<nav class="navbar" id="navigation">
-				<a href="#about" id="about-link">#O mnie</a>
-				<a href="#projects" id="projects-link">#Projekty</a>
-				<a href="#contact" id="contact-link">#Kontakt</a>
-			</nav>
-		</div>
+    <div class="header_parala1">
+    </div>
+    <div class="header__title2">
+      <h2>Jan Szczepański</h2>
+    </div>
+    <div class="header_parala2">
+    </div> 		
+    <div class="header_parala3">
+      <img class="header__person" src="img/person.png">
+    </div>     
+		<nav class="navbar" id="navigation">
+			<a href="#about" id="about-link">#O mnie</a>
+			<a href="#projects" id="projects-link">#Projekty</a>
+			<a href="#contact" id="contact-link">#Kontakt</a>
+		</nav>
 	</header>
-
-	<div class="break">
-	</div>
 
 	<section id="about" class="section">
 		<h2 class="section__heading">O mnie</h2>
@@ -50,8 +50,53 @@
 	<section class="section">
 		<h2 class="section__heading">Ukończone kursy</h2>
 		<div class="courses">
-			<img class="courses__img" src="img/fcc.jpeg">
-		</div>
+      <div class="slider" id="slider">
+        <div class="holder" id="holder">
+            <div class="slide-wrapper active">
+              <div class="slide"><img class="slide-img" src="img/fcc.jpg" alt=""></div>
+              <div class="temp">
+                <p>FreeCodeCamp</p>
+                <ul>
+                  <li>Responsive Web Design Certification</li>
+                  <li>Javascript Algorithms And Data Structures Certification</li>
+                  <li>Front End Libraries Certification</li>
+                </ul>
+              </div>
+            </div>
+            <div class="slide-wrapper next">
+              <div class="slide"><img class="slide-img" src="img/wesbos.jpg" alt=""></div>
+              <div class="temp">
+                <p>Wesbos</p>
+                <ul>
+                  <li>JavaScript30</li>
+                  <li>ES6 for Everyone</li>
+                  <li>React For Beginners</li>
+                </ul>
+              </div>
+            </div>
+            <div class="slide-wrapper next">
+              <div class="slide"><img class="slide-img" src="img/cc.png" alt=""></div>
+              <div class="temp">
+                <p>Codeacademy</p>
+                <ul>
+                  <li>Introduction To JavaScript</li>
+                  <li>Learn Git</li>
+                  <li>Learn ReactJS</li>
+                </ul>
+              </div>
+            </div>
+            <div class="slide-wrapper previous">
+              <div class="slide"><img class="slide-img" src="img/udemy.jpg" alt=""></div>
+              <div class="temp">
+                <p>Udemy</p>
+                <ul>
+                  <li>Git Going Fast: One Hour Git Crash Course</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
 		<div class="section__content">
 			<p>Jestem wielkim fanem i "użytkownikiem" samokształcenia z wykorzystaniem darmowych wirtualnych źródeł. Ucząc się w ten sposób można wykształcić w sobie niezawodne metody i zwyczaje, które przydadzą nam się w trakcie całego życia. Oczywiście nie każda dziedzina pozwala obecnie na uzyskania niezbędnych umiejętności praktycznych lecz jestem pewien, że z czasem się to zmieni! Programowanie to druga umiejętność po języku japońskim, którą staram się nabyć w myśl tej metody! Obecnie staram się również aby stało się ono moim chlebem.</p>
 		</div>
@@ -103,76 +148,81 @@
 	<section id="projects" class="section">
 		<h2 class="section__heading">Projekty</h2>
 		<div class="projects">
-			<img class="projects__img" src="img/immersive-japanese.jpg">
-		</div>
-		<div class="section__content">
-			<p>Jestem wielkim fanem i "użytkownikiem" samokształcenia z wykorzystaniem darmowych wirtualnych źródeł. Ucząc się w ten sposób można wykształcić w sobie niezawodne metody i zwyczaje, które przydadzą nam się w trakcie całego życia. Oczywiście nie każda dziedzina pozwala obecnie na uzyskania niezbędnych umiejętności praktycznych lecz jestem pewien, że z czasem się to zmieni! Programowanie to druga umiejętność po języku japońskim, którą staram się nabyć w myśl tej metody! Obecnie staram się również aby stało się ono moim chlebem.</p>
+      <div class="projects__container">
+			 <img class="projects__img" src="img/project1.jpg">
+      </div>
+      <div class="projects__container">
+       <img class="projects__img" src="img/project2.jpg">
+      </div>
+      <div class="projects__container">
+       <img class="projects__img" src="img/project3.jpg">
+      </div>
+      <div class="projects__container">
+       <img class="projects__img" src="img/project4.jpg">
+      </div>
+
 		</div>
 	</section>
 
 
 	<footer class="footer">
 		<button id="contact" class="footer__button">Napisz do mnie!</button>
-		<div class="footercol">
 		<form id="form" method="post" action="https://usebasin.com/f/8bfa23353632" class="footer__form invis">
                 <input class="form__ele" name="name" type="text" placeholder="Imię i nazwisko" maxlength="50" required="">
                 <input class="form__ele" name="email" type="email" placeholder="Adres email" maxlength="50" required="">
-                <textarea class="form__ele" name="message" placeholder="Wiadomość" maxlength="350" required=""></textarea>
-                <input class="form__ele" id="submit" name="submit" type="submit" value="Wyślij">
-            </form>
-            </div>
-  		<div class="footercol left">
-  			<a href="#"><i class="fab fa-facebook"></i></a>
-  			<a href="#"><i class="fab fa-linkedin"></i></a>
-  			<a href="#"><i class="fab fa-github"></i></a>
-  			<a href="mailto:someone@example.com"><i class="fa fa-envelope"></i></a>
-  		</div>
-  		<div class="footercol">
-  			<small>© Coppyright by Jan Szczepański 2018</small>
-  		</div>
-</footer>
+                <textarea class="form__ele" name="message" placeholder="Wiadomość" rows="5" maxlength="350" required=""></textarea>
+                <input class="form__ele form__ele-submit" id="submit" name="submit" type="submit" value="Wyślij">
+    </form>
+  	<div class="footer__media">
+  		<a class="footer__link" href="https://www.facebook.com/John-Flower-Bouquet-205085443424251/" target="_blank"><i class="fab fa-facebook"></i></a>
+  		<a class="footer__link" href="https://www.linkedin.com/in/jan-szczepa%C5%84ski-61a60a14b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  		<a class="footer__link" href="https://github.com/JohnFlowerBouquet/" target="_blank"><i class="fab fa-github"></i></a>
+  		<a class="footer__link" href="mailto:jan.szczepanski@gmail.com"><i class="fa fa-envelope"></i></a>
+  	</div>
+  	<div class="footer__copy">
+  		<small>© Coppyright by Jan Szczepański 2018</small>
+  	</div>
+  </footer>
 
 <script src="https://www.goodreads.com/review/custom_widget/84293887.Ostatnio%20przeczytane:?cover_size=medium&num_books=5&order=a&shelf=it&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_added&&widget_bg_transparent=true&&widget_id=1533674007&widget_title_size=medium" type="text/javascript" charset="utf-8"></script>
 
 <script>
 //Goodreads shelf
 var goodreads = document.querySelector('.goodreads');
+var links = document.querySelectorAll('.goodreads a');
 var recently = document.querySelector('.gr_custom_header_1533674007').firstElementChild;
 var books = document.getElementsByClassName('gr_custom_each_container_1533674007');
 window.addEventListener('load', function(event){
 	document.querySelector('center').remove();
-    recently.setAttribute('target', '_blank');
+    links.forEach(link => link.setAttribute('target', '_blank'));
+    recently.innerHTML = `<i style="font-size: 34px" class="fas fa-book-open"></i></br>Ostatnio przeczytane:`;
     recently.removeAttribute('href');
     recently.addEventListener('click', function() {
     	for(var i = books.length - 1; i >= 0; --i)
     {
-        books[i].classList.toggle('hidden');
-    }});
-        for(var i = books.length - 1; i >= 0; --i)
-    {
-        books[i].classList.add('hidden');
-    } 
-    
+        books[i].classList.toggle('active');
+    }});    
 });
 //Show contact message
 var contact = document.getElementById('contact');
 var form = document.getElementById('form');
 contact.addEventListener('click', function(event) {
 	contact.classList.add('hidden');
-	form.classList.remove('invis');
+	form.classList.add('visible');
 })
 
 
 //Fixed Navbar
 var navbar = document.querySelector('#navigation');
 const navbarPos = navbar.offsetTop;
-window.onscroll = function() {
-	if (window.pageYOffset >= navbarPos) {
+function fixedNavbar() {
+	if (window.scrollY >= navbarPos) {
 		navbar.classList.add('navbar-fixed');
 	} else {
 		navbar.classList.remove('navbar-fixed');
 	}
 };
+window.addEventListener('scroll', fixedNavbar);
 
 //Move To anchors
 $(window).on("load", function(){
@@ -187,98 +237,108 @@ $(window).on("load", function(){
     }
   });
 });
-
-//Twinkle Stars
-var canvas = document.querySelector('canvas');
-var ctx = canvas.getContext('2d');
-fitToContainer(canvas);
-
-function fitToContainer(canvas){
-  canvas.style.width='100%';
-  canvas.style.height='100%';
-  canvas.width  = canvas.offsetWidth;
-  canvas.height = canvas.offsetHeight;
+// Projects scrollover
+/*
+var projects = document.querySelectorAll('.projects__container');
+document.addEventListener('scroll', projectsActive(projects))
+function projectsActive(project) {
+  if (window.scrollY >= project.offsetTop && window.scrollY <= (project.offsetTop + project.clientHeight)) {
+    project.style.scale = 1.0;
+  }
 }
+*/
 
-var canvasWidth = canvas.width;
-var canvasHeight = canvas.height;
+//Slider
+const slides = Array.from(document.querySelectorAll('.slide-wrapper'));
+const holder = document.getElementById('slider');
+var active = slides[0];
+var index = 0;
 
-(function() {
-  window.addEventListener("resize", resizeThrottler, false);
-  var resizeTimeout;
-  function resizeThrottler() {
-    if ( !resizeTimeout ) {
-    	console.log("resized");
-      resizeTimeout = setTimeout(function() {
-        resizeTimeout = null;
-        actualResizeHandler();
-       }, 66);
+
+
+function slider(direction) {
+  let first = slides[0];
+  let last = slides[slides.length - 1];
+  let previous = slides[slides.findIndex(slide => slide.classList.contains('previous'))];
+  let hidden = slides[slides.findIndex(slide => slide.classList.contains('hidden'))];
+
+  if (direction === 1) {
+    previous.classList.add('next');
+    previous.classList.add('hidden');
+    previous.classList.remove('previous');
+    active == last ? index = 0 : index += 1;
+    active.classList.remove('active');
+    active.classList.add('previous');
+    active = slides[index];   
+    active.classList.remove('next');
+    active.classList.add('active');
+    index = slides.indexOf(active);
+  }
+  if (direction === -1) {
+    active == first ? index = slides.length - 1 : index -= 1;
+    active.classList.add('next');
+    active.classList.remove('active');
+    previous.classList.add('active');
+    previous.classList.remove('previous');
+    active = slides[index];
+    if (active == first) {
+      last.classList.remove('next');
+      last.classList.add('hidden');
+      last.classList.add('previous');
+    } else {
+    slides[index - 1].classList.remove('next');
+    slides[index - 1].classList.add('hidden');
+    slides[index - 1].classList.add('previous');
     }
+    index = slides.indexOf(active);
   }
-  function actualResizeHandler() {
-    animate();
+  
+}
+slides.forEach(slide => slide.addEventListener('webkitTransitionEnd', (e) => e.target.classList.remove('hidden') , false ));
+
+var clientX;
+function swipeStart(e) {
+  clientX = e.touches[0].clientX;
+};
+
+function swipeEnd(e) {
+  var deltaX;
+  deltaX = e.changedTouches[0].clientX - clientX;
+  if (slides.some( slide => slide.classList.contains("hidden") ? true : false)) return;
+  if (deltaX >= 30) {
+    slider(-1);
+  } else if (deltaX <= -30) {
+    slider(1);
   }
+};
 
-}());
-
-function Star(x, y, r, color) {
-	this.x = x;
-	this.y = y;
-	this.r = r;
-	this.color = color;
-	this.rChange = 0.015;
+/*function swipe(e) {
+  console.log(e.targetTouches[0].clientX);
+  var newXTransform = (clientX + e.targetTouches[0].clientX)+'px';
+    var transformStyle = 'translateX('+newXTransform+')';
+    active.style.webkitTransform = transformStyle;
+    active.style.MozTransform = transformStyle;
+    active.style.msTransform = transformStyle;
+    active.style.transform = transformStyle;
 }
+*/
+function arrows(e) {
+  if (slides.some( slide => slide.classList.contains("hidden") ? true : false)) return;
+    if (e.keyCode == '37') {
+      slider(-1);
+      } else if (e.keyCode == '39') {
+        slider(1);
+      }
+};
 
-Star.prototype = {
-	constructor: Star,
-	render: function() {
-		ctx.beginPath();
-		ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2, false);
-		ctx.shadowBlur = 8;
-		ctx.shadowColor = "#fff";
-		ctx.fillStyle = this.color;
-		ctx.fill();
-	},
-	update: function() {
-		if (this.r > 2 || this.r < .8){
-           this.rChange = - this.rChange;
-       }
-       this.r += this.rChange;
-	}
-}
-
-function randomColor() {
-	var arrColors = ['ffffff', 'ffecd3', 'bfcfff'];
-	return "#" + arrColors[Math.floor((Math.random()*3))];
-}
-
-var stars = [];
-
-for(i = 0; i < 50; i++) {
-	var randomX = Math.floor((Math.random()*canvasWidth)+1);
-	var randomY = Math.floor((Math.random()*canvasHeight)+1);
-	var randomR = Math.random() * 1.5 + .5;
-	var star = new Star(randomX, randomY, randomR, randomColor());
-	stars.push(star);
-}
-
-function update() {
-	for(i = 0; i < stars.length; i++) {
-		if (stars[i].r > 2 || stars[i].r < .8){
-           stars[i].rChange = - stars[i].rChange;
-       }
-       stars[i].r += stars[i].rChange;
-	}
-}
-function animate() {
-	update();
-	ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-	for(var i = 0; i < stars.length; i++) {
-		stars[i].render();
-	}
-	requestAnimationFrame(animate);
-}
-animate();
+if (navigator.maxTouchPoints >= 1) {
+  holder.addEventListener('touchstart', (e) => swipeStart(e), false);        
+  //  holder.addEventListener('touchmove', (e) => swipe(e), false);
+  holder.addEventListener('touchend', (e) => swipeEnd(e), false);
+  holder.addEventListener('touchcancel', (e) => swipeEnd(e), false);
+ } else {
+  window.addEventListener('keydown', (e) => arrows(e), false);
+ }
 
 </script>
 
