@@ -1,346 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Portfolio</title>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta name="description" content="John's Portfolio Page">
-	<meta name="keywords" content="JohnFlowerBouquet Portfolio Page">
-	<meta name="author" content="JohnFlowerBouquet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Cabin:700|Lato|Montserrat" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/main.min.css" />
+  <title>Jan Szczepański Portfolio</title>
 </head>
-<body>
 
-	<header class="header">
-		<div class="header__title1">
-			<h1>Portfolio</h1>
-		</div>
-    <div class="header_parala1">
+<body id="bg-img">
+  <header class="header">
+    <div class="header-logo">
+      <div class="portrait"></div>
     </div>
-    <div class="header__title2">
-      <h2>Jan Szczepański</h2>
+    <h1 class="lg-heading">
+      Jan<span class="text-secondary"><br class="break" /> Szczepański</span>
+    </h1>
+    <h2 class="sm-heading">Junior Front-end Developer</h2>
+    <div class="icons">
+      <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+      <a href="#"><i class="fab fa-github fa-2x"></i></a>
     </div>
-    <div class="header__title3">
-      <h2>Junior Front-end Developer</h2>
+  </header>
+  <main class="main">
+    <div class="projects-heading">
     </div>
-    <div class="header_parala2">
-    </div> 		
-    <div class="header_parala3">
-    </div>
-    <div class="header__person"></div>  
-		<nav class="navbar" id="navigation">
-			<a href="#about" id="about-link">#O mnie</a>
-			<a href="#projects" id="projects-link">#Projekty</a>
-			<a href="#contact" id="contact-link">#Kontakt</a>
-		</nav>
-    <div class="header__arrow">
-    <a hrf ="#about"><i class="fas fa-angle-down"></i></a>
-    </div>
-	</header>
-<div class="wrapper">
-	<section id="about" class="section">
-		<h2 class="section__heading">O mnie</h2>
-		<figure>
-  			<img class="section__image" src="img/photo.png" alt="The Pulpit Rock">
-		</figure>
-		<div class="section__content">
-			<p>Witaj, nazywam się Jan Szczepański i witam Cię serdecznie na moim portfolio! Mam 24 lata i obecnie intensywnie uczę się programowania aby zostać front-end developerem.</p>
-		</div>
-		<a class="section__link" href="#" id="cv">Pobierz moje CV!</a>
-	</section>
+    <h2 class="section-heading">My<br /> Projects</h2>
 
-	<section class="section">
-		<h2 class="section__heading">Ukończone kursy</h2>
-		<div class="courses">
-      <div class="slider__arrow-right"><i class="fas fa-caret-right"></i></div>
-      <div class="slider__arrow-left"><i class="fas fa-caret-left"></i></div>
-      <div class="slider" id="slider">
-        <div class="holder" id="holder">
-            <div class="slide-wrapper active">
-              <div class="slide"><img class="slide-img" src="img/fcc.jpg" alt=""></div>
-              <div class="temp">
-                <p>FreeCodeCamp</p>
-                <ul>
-                  <li>Responsive Web Design Certification</li>
-                  <li>Javascript Algorithms And Data Structures Certification</li>
-                  <li>Front End Libraries Certification</li>
-                </ul>
-              </div>
-            </div>
-            <div class="slide-wrapper next">
-              <div class="slide"><img class="slide-img" src="img/wesbos.jpg" alt=""></div>
-              <div class="temp">
-                <p>Wesbos</p>
-                <ul>
-                  <li>JavaScript30</li>
-                  <li>ES6 for Everyone</li>
-                  <li>React For Beginners</li>
-                </ul>
-              </div>
-            </div>
-            <div class="slide-wrapper next">
-              <div class="slide"><img class="slide-img" src="img/cc.png" alt=""></div>
-              <div class="temp">
-                <p>Codeacademy</p>
-                <ul>
-                  <li>Introduction To JavaScript</li>
-                  <li>Learn Git</li>
-                  <li>Learn ReactJS</li>
-                </ul>
-              </div>
-            </div>
-            <div class="slide-wrapper previous">
-              <div class="slide"><img class="slide-img" src="img/udemy.jpg" alt=""></div>
-              <div class="temp">
-                <p>Udemy</p>
-                <ul>
-                  <li>Git Going Fast: One Hour Git Crash Course</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-		<div class="section__content">
-			<p>Jestem wielkim fanem i "użytkownikiem" samokształcenia z wykorzystaniem darmowych wirtualnych źródeł. Ucząc się w ten sposób można wykształcić w sobie niezawodne metody i zwyczaje, które przydadzą nam się w trakcie całego życia. Oczywiście nie każda dziedzina pozwala obecnie na uzyskania niezbędnych umiejętności praktycznych lecz jestem pewien, że z czasem się to zmieni! Programowanie to druga umiejętność po języku japońskim, którą staram się nabyć w myśl tej metody! Obecnie staram się również aby stało się ono moim chlebem.</p>
-		</div>
-	</section>
-
-	<section class="section">
-		<h2 class="section__heading">Biblioteczka</h2>
-		<div class="goodreads">
-      		<div id="gr_grid_widget_1533674007">
-        <!-- Show static html as a placeholder in case js is not enabled - javascript include will override this if things work -->
-        <!-- Show static HTML/CSS as a placeholder in case js is not enabled - javascript include will override this if things work -->
-      			<div id="gr_custom_widget_1533674007">
-          			<div class="gr_custom_container_1533674007">
-    					<button id="recently">Ostatnio przeczytane:</button>
-      						<div class="gr_custom_each_container_1533674007">
-          						<div class="gr_custom_book_container_1533674007">
-            						<a title="The Principles of Beautiful Web Design" rel="nofollow" href="https://www.goodreads.com/review/show/2460491835?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Principles of Beautiful Web Design" border="0" src="https://images.gr-assets.com/books/1436377686m/258823.jpg" /></a>
-          						</div>
-          						<div class="gr_custom_title_1533674007">
-            						<a rel="nofollow" href="https://www.goodreads.com/review/show/2460491835?utm_medium=api&amp;utm_source=custom_widget">The Principles of Beautiful Web Design</a>
-          						</div>
-          						<div class="gr_custom_author_1533674007"> by <a rel="nofollow" href="https://www.goodreads.com/author/show/151232.Jason_Beaird">Jason Beaird</a>
-          						</div>
-      						</div>
-      						<div class="gr_custom_each_container_1533674007">
-          						<div class="gr_custom_book_container_1533674007">
-            						<a title="The Self-Taught Programmer: The Definitive Guide to Programming Professionally" rel="nofollow" href="https://www.goodreads.com/review/show/2460492946?utm_medium=api&amp;utm_source=custom_widget"><img alt="The Self-Taught Programmer: The Definitive Guide to Programming Professionally" border="0" src="https://images.gr-assets.com/books/1482729135m/33580202.jpg" /></a>
-          						</div>
-          						<div class="gr_custom_title_1533674007">
-            						<a rel="nofollow" href="https://www.goodreads.com/review/show/2460492946?utm_medium=api&amp;utm_source=custom_widget">The Self-Taught Programmer: The Definitive Guide to Programming Professionally</a>
-          						</div>
-          						<div class="gr_custom_author_1533674007"> by <a rel="nofollow" href="https://www.goodreads.com/author/show/16233239.Cory_Althoff">Cory Althoff</a>
-          						</div>
-      						</div>
-  							<center>
-    							<p>Zobacz mój profil na:</p><a rel="nofollow" href="https://www.goodreads.com/user/show/84293887-john" target="blank"><img alt="goodreads.com" src="https://www.goodreads.com/images/widget/widget_logo.gif" /></a>
-  							</center>
-  					</div>
-
-      			</div>
-      
-			</div>
-		</div> <!-- koniec goodreads -->
-   		<div class="section__content">
-			<p>Mimo, że tradycyjne ksiązki nie posiadają dynamicznej struktury, która aktualizowałaby ich treść na bieżąco z obecnymi trendami to są one doskonałą odskocznią od ekranu monitora czy telefonu od czasu do czasu. Oprócz książek związanych z programowaniem czytam również powieści fantasy oraz różnego rodzaju książki o samodoskonaleniu.</p>
-		</div>
-	</section>
-
-	<section id="projects" class="section">
-		<h2 class="section__heading">Projekty</h2>
-		<div class="projects">
-      <div class="projects__container">
-	      <a href="/immersiveJapanese/index.html"><img class="projects__img" src="img/project1.jpg"></a>
+    <div class="projects">
+      <div class="item">
+        <a href="#!">
+          <img src="img/projects/project1.jpg" alt="Project 1">
+        </a>
+        <a href="#" class="btn-light">
+          <p>Immersive Japanese</p>
+          <p>Technologies:<br /> <span class="tag tag-js">Javascript</span>
+            <span class="tag tag-html">HTML</span>
+            <span class="tag tag-css">CSS</span>
+          </p>
+        </a>
+        <a href="#" class="btn-dark">
+          <i class="fab fa-github"></i> Github
+        </a>
       </div>
-      <div class="projects__container">
-       <img class="projects__img" src="img/project2.jpg">
+      <div class="item">
+        <a href="#!">
+          <img src="img/projects/project2.jpg" alt="Project 2">
+        </a>
+        <a href="#" class="btn-light">
+          <i class="fas fa-eye"></i> Projects
+        </a>
+        <a href="#" class="btn-dark">
+          <i class="fab fa-github"></i> Github
+        </a>
       </div>
-      <div class="projects__container">
-       <img class="projects__img" src="img/project3.jpg">
+      <div class="item">
+        <a href="#!">
+          <img src="img/projects/project3.jpg" alt="Project 3">
+        </a>
+        <a href="#" class="btn-light">
+          <i class="fas fa-eye"></i> Projects
+        </a>
+        <a href="#" class="btn-dark">
+          <i class="fab fa-github"></i> Github
+        </a>
       </div>
-      <div class="projects__container">
-       <img class="projects__img" src="img/project4.jpg">
+      <div class="item">
+        <a href="#!">
+          <img src="img/projects/project4.jpg" alt="Project 4">
+        </a>
+        <a href="#" class="btn-light">
+          <i class="fas fa-eye"></i> Projects
+        </a>
+        <a href="#" class="btn-dark">
+          <i class="fab fa-github"></i> Github
+        </a>
       </div>
-	  <div class="projects__container">
-       <a href="/personal-trainer/index.html"><img class="projects__img" src="img/project5.jpg"></a>
+      <div class="item">
+        <a href="#!">
+          <img src="img/projects/project5.jpg" alt="Project 5">
+        </a>
+        <a href="#" class="btn-light">
+          <i class="fas fa-eye"></i> Projects
+        </a>
+        <a href="#" class="btn-dark">
+          <i class="fab fa-github"></i> Github
+        </a>
       </div>
-		</div>
-	</section>
-</div>
+    </div>
 
-	<footer class="footer">
-		<button id="contact" class="footer__button">Napisz do mnie!</button>
-		<form id="form" method="post" action="https://usebasin.com/f/8bfa23353632" class="footer__form invis">
-                <input class="form__ele" name="name" type="text" placeholder="Imię i nazwisko" maxlength="50" required="">
-                <input class="form__ele" name="email" type="email" placeholder="Adres email" maxlength="50" required="">
-                <textarea class="form__ele" name="message" placeholder="Wiadomość" rows="5" maxlength="350" required=""></textarea>
-                <input class="form__ele form__ele-submit" id="submit" name="submit" type="submit" value="Wyślij">
-    </form>
-  	<div class="footer__media">
-  		<a class="footer__link" href="https://www.facebook.com/John-Flower-Bouquet-205085443424251/" target="_blank"><i class="fab fa-facebook"></i></a>
-  		<a class="footer__link" href="https://www.linkedin.com/in/jan-szczepa%C5%84ski-61a60a14b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-  		<a class="footer__link" href="https://github.com/JohnFlowerBouquet/" target="_blank"><i class="fab fa-github"></i></a>
-  		<a class="footer__link" href="mailto:jan.szczepanski@gmail.com"><i class="fa fa-envelope"></i></a>
-  	</div>
-  	<div class="footer__copy">
-  		<small>© Coppyright by Jan Szczepański 2018</small>
-  	</div>
+    <div class="knowledge">
+      <div class="knowledge_button">
+        <span class="text-secondary">My knowledge database</span>
+      </div>
+    </div>
+
+  </main>
+  <footer id="main-footer">
+    Copyright &copy; 2018
   </footer>
-
-<script src="https://www.goodreads.com/review/custom_widget/84293887.Ostatnio%20przeczytane:?cover_size=medium&num_books=5&order=a&shelf=it&show_author=1&show_cover=1&show_rating=0&show_review=0&show_tags=0&show_title=1&sort=date_added&&widget_bg_transparent=true&&widget_id=1533674007&widget_title_size=medium" type="text/javascript" charset="utf-8"></script>
-
-<script>
-//Goodreads shelf
-var goodreads = document.querySelector('.goodreads');
-var links = document.querySelectorAll('.goodreads a');
-var recently = document.querySelector('.gr_custom_header_1533674007').firstElementChild;
-var books = document.getElementsByClassName('gr_custom_each_container_1533674007');
-window.addEventListener('load', function(event){
-	document.querySelector('center').remove();
-    links.forEach(link => link.setAttribute('target', '_blank'));
-    recently.innerHTML = `<i style="font-size: 34px" class="fas fa-book-open"></i></br>Ostatnio przeczytane:`;
-    recently.removeAttribute('href');
-    recently.addEventListener('click', function() {
-    	for(var i = books.length - 1; i >= 0; --i)
-    {
-        books[i].classList.toggle('active');
-    }});    
-});
-//Show contact message
-var contact = document.getElementById('contact');
-var form = document.getElementById('form');
-contact.addEventListener('click', function(event) {
-	contact.classList.add('hidden');
-	form.classList.add('visible');
-})
-
-
-//Fixed Navbar
-var navbar = document.querySelector('#navigation');
-const navbarPos = navbar.offsetTop;
-function fixedNavbar() {
-	if (window.scrollY >= navbarPos) {
-		navbar.classList.add('navbar-fixed');
-	} else {
-		navbar.classList.remove('navbar-fixed');
-	}
-};
-window.addEventListener('scroll', fixedNavbar);
-
-//Move To anchors
-$(window).on("load", function(){
-  $(".navbar a").on('click', function(event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top - 100
-      }, 800,
-      );
-    }
-  });
-});
-// Projects scrollover
-/*
-var projects = document.querySelectorAll('.projects__container');
-document.addEventListener('scroll', projectsActive(projects))
-function projectsActive(project) {
-  if (window.scrollY >= project.offsetTop && window.scrollY <= (project.offsetTop + project.clientHeight)) {
-    project.style.scale = 1.0;
-  }
-}
-*/
-
-//Slider
-const slides = Array.from(document.querySelectorAll('.slide-wrapper'));
-const holder = document.getElementById('slider');
-var active = slides[0];
-var index = 0;
-
-
-
-function slider(direction) {
-  let first = slides[0];
-  let last = slides[slides.length - 1];
-  let previous = slides[slides.findIndex(slide => slide.classList.contains('previous'))];
-  let hidden = slides[slides.findIndex(slide => slide.classList.contains('hidden'))];
-
-  if (direction === 1) {
-    previous.classList.add('next');
-    previous.classList.add('hidden');
-    previous.classList.remove('previous');
-    active == last ? index = 0 : index += 1;
-    active.classList.remove('active');
-    active.classList.add('previous');
-    active = slides[index];   
-    active.classList.remove('next');
-    active.classList.add('active');
-    index = slides.indexOf(active);
-  }
-  if (direction === -1) {
-    active == first ? index = slides.length - 1 : index -= 1;
-    active.classList.add('next');
-    active.classList.remove('active');
-    previous.classList.add('active');
-    previous.classList.remove('previous');
-    active = slides[index];
-    if (active == first) {
-      last.classList.remove('next');
-      last.classList.add('hidden');
-      last.classList.add('previous');
-    } else {
-    slides[index - 1].classList.remove('next');
-    slides[index - 1].classList.add('hidden');
-    slides[index - 1].classList.add('previous');
-    }
-    index = slides.indexOf(active);
-  }
-  
-}
-slides.forEach(slide => slide.addEventListener('webkitTransitionEnd', (e) => e.target.classList.remove('hidden') , false ));
-
-var clientX;
-function swipeStart(e) {
-  clientX = e.touches[0].clientX;
-};
-
-function swipeEnd(e) {
-  var deltaX;
-  deltaX = e.changedTouches[0].clientX - clientX;
-  if (slides.some( slide => slide.classList.contains("hidden") ? true : false)) return;
-  if (deltaX >= 30) {
-    slider(-1);
-  } else if (deltaX <= -30) {
-    slider(1);
-  }
-};
-function arrows(e) {
-  if (slides.some( slide => slide.classList.contains("hidden") ? true : false)) return;
-    if (e.keyCode == '37') {
-      slider(-1);
-      } else if (e.keyCode == '39') {
-        slider(1);
-      }
-};
-
-if (navigator.maxTouchPoints >= 1) {
-  holder.addEventListener('touchstart', (e) => swipeStart(e), false);        
-  //  holder.addEventListener('touchmove', (e) => swipe(e), false);
-  holder.addEventListener('touchend', (e) => swipeEnd(e), false);
-  holder.addEventListener('touchcancel', (e) => swipeEnd(e), false);
- } else {
-  window.addEventListener('keydown', (e) => arrows(e), false);
- }
-//Tools
-
-</script>
-
+  <script src="js/main.min.js"></script>
 </body>
+
 </html>
