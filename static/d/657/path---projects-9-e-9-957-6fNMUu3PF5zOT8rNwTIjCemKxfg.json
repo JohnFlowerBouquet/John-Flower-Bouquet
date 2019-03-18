@@ -1,0 +1,1 @@
+{"errors":[{"message":"Variable \"$postsLimit\" is never used in operation \"IndexTemplate\".","locations":[{"line":2,"column":3}]},{"message":"Variable \"$postsOffset\" is never used in operation \"IndexTemplate\".","locations":[{"line":3,"column":3}]}],"pageContext":{}}
