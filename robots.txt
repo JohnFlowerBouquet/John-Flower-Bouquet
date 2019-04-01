@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://johnflowerbouquet.github.io/sitemap.xml
+Host: https://johnflowerbouquet.github.io
